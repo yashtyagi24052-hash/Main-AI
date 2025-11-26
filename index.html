@@ -5,67 +5,131 @@
     <title>Navo AI - Home</title>
 
     <style>
-        body {
+        /* Global */
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #e8ebff, #f3f6ff);
+            overflow-x: hidden;
+        }
+
+        /* Background Blur Blobs */
+        .blob1, .blob2 {
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, rgba(73,97,255,0.55), rgba(122,0,255,0.45), rgba(255,255,255,0));
+            filter: blur(90px);
+            z-index: -1;
+        }
+        .blob1 { top: -50px; left: -40px; }
+        .blob2 { bottom: -60px; right: -40px; }
+
+        /* Header Glass Navbar */
         header {
-            background: black;
-            padding: 15px 25px;
-            color: white;
+            width: 100%;
+            padding: 22px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.55);
+            border-bottom: 1px solid rgba(255,255,255,0.4);
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         header h2 {
-            margin: 0;
+            font-size: 26px;
+            font-weight: 700;
+            color: #2a2a2a;
         }
 
         nav a {
-            margin-left: 20px;
-            color: white;
+            margin-left: 25px;
+            color: #333;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 16px;
+            font-weight: 600;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: gray;
+            color: #6c63ff;
         }
 
+        /* Hero Section */
         .hero {
-            padding: 60px;
+            padding: 110px 30px;
             text-align: center;
+            max-width: 900px;
+            margin: auto;
         }
 
         .hero h1 {
-            font-size: 40px;
+            font-size: 45px;
+            font-weight: 700;
+            color: #2f2f2f;
+            margin-bottom: 15px;
+            line-height: 55px;
         }
 
         .hero p {
-            font-size: 20px;
-            color: #444;
+            font-size: 18px;
+            color: #5e5e5e;
+            max-width: 650px;
+            margin: 0 auto;
         }
 
+        /* Gradient Button */
         .btn-main {
-            padding: 12px 22px;
-            background: black;
+            padding: 14px 35px;
+            background: linear-gradient(135deg, #6b5bff, #8f5bff);
             color: white;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 10px;
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0px 12px 22px rgba(120, 87, 255, 0.3);
         }
 
         .btn-main:hover {
-            background: #333;
+            transform: translateY(-3px);
+            box-shadow: 0px 18px 28px rgba(120, 87, 255, 0.4);
         }
+
+        /* AI Image Card */
+        .ai-card {
+            margin: 60px auto;
+            width: 550px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.55);
+            border-radius: 22px;
+            backdrop-filter: blur(18px);
+            box-shadow: 0px 10px 35px rgba(0,0,0,0.08);
+        }
+
+        .ai-card img {
+            width: 100%;
+            border-radius: 16px;
+        }
+
     </style>
 </head>
 
 <body>
+
+    <div class="blob1"></div>
+    <div class="blob2"></div>
 
     <header>
         <h2>Navo AI</h2>
@@ -78,9 +142,16 @@
     </header>
 
     <div class="hero">
-        <h1>Welcome to Navo AI</h1>
-        <p>यह आपकी AI वेबसाइट का बेस HTML पेज है।</p>
+        <h1>The region of<br>industry where knowledge evolves</h1>
+        <p>
+            Navo AI provides an advanced AI experience that evolves with you.  
+            Built for modern web applications with fast, clean and powerful design.
+        </p>
         <a class="btn-main" href="#">Open Chat</a>
+    </div>
+
+    <div class="ai-card">
+        <img src="https://i.ibb.co/Rykqk0G/ai-art.png" alt="AI Graphic">
     </div>
 
 </body>
